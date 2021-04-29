@@ -1,0 +1,45 @@
+{
+   "scopeName": "source.arx",
+   "fileTypes": [".arx"],
+   "patterns": [
+      { "include": "#comments" },
+      { "include": "#keywords" },
+      { "include": "#constants" }
+   ],
+   "repository": {
+      "comments": {
+         "patterns": [{
+            "match": "#.*$\n?",
+            "name": "comment.line.number-sign.arx"
+         }]
+      },
+      "keywords": {
+         "patterns": [
+            {
+               "match": "\\b(bit|bitvector|boolean|enum|integer|real|signed|string|unsigned)\\b",
+               "name": "support.type.arx"
+            },
+            {
+               "match": "\\b(begin|component|case|elif|else|end|external|for|function|generate|generic|if|import|in|of|or|out|register|return|type|variable|when)\\b",
+               "name": "keyword.control.arx"
+            },
+            {
+               "match": "\\b(abs|array|ceil|constant|floor|caseconvert|log2|max|min|mod|not|pow2|reinterpret|xor)\\b",
+               "name": "support.function.arx"
+            },
+            {
+               "match": "(=|\\+|-|\\*|/|>>|<<|<|>|==|\\!=|<=|>=|and)",
+               "name": "keyword.operator.arx"
+            }
+         ]
+      },
+      "constants": {
+         "patterns": [
+            {
+               "match": "(?<!\\$)\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b(?!\\$)",
+               "name": "constant.numeric.arx"
+            }
+         ]
+      }
+   }
+}

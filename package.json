@@ -1,0 +1,23 @@
+{
+    "name": "arx",
+    "displayName": "Arx",
+    "description": "Syntax highlighting, code completion for Arx",
+    "publisher": "nsulzer",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "contributes": {
+        "languages": [{
+            "id": "arx",
+            "aliases": ["arx", "Arx"],
+            "extensions": [".arx"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "arx",
+            "scopeName": "source.arx",
+            "path": "./arx.tmLanguage.json"
+        }]
+    }
+}
